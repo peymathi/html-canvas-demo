@@ -9,7 +9,7 @@ con.fillStyle = "red";
 mouseDown = false;
 
 // Global radius value for the brush size
-brushRadius = 5
+brushRadius = 20
 
 // Globals that keep track of the mouses current and last position relative to the canvas object
 oldx = 0;
