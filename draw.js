@@ -18,7 +18,7 @@ oldy = 0;
 newx = 0;
 newy = 0;
 
-// Draws a single filled circle at the location specified with radius of brushRadius. Draws a line from that circle to the next location
+// Draws a line between two points - The first old position and new position
 function userDraw()
 {
     con.beginPath();
@@ -27,7 +27,6 @@ function userDraw()
     con.lineWidth = brushRadius * 4;
     con.moveTo(oldx, oldy);
     con.lineTo(newx, newy);
-    con.arc(newx, newy, brushRadius, 0, 2 * Math.PI);
     con.closePath();
     con.fill();
     con.stroke();
