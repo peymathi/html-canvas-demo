@@ -18,7 +18,6 @@ $(document).ready(function () {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            alert("we are now drawing");
             currentlyDrawing = setInterval(userDraw, 10);
         }
 
