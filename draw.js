@@ -1,4 +1,6 @@
 var canvas = $("#canvas")[0];
+
+// Global connection to the canvas
 var con = canvas.getContext("2d");
 con.strokeStyle = "red";
 con.fillStyle = "red";
@@ -6,12 +8,13 @@ con.fillStyle = "red";
 // Global bool that keeps the pointer drawing
 currentlyDrawing = 0;
 
-function userDraw(event)
+// Global radius value for the brush size
+brushRadius = 2
+
+function userDraw(x, y)
 {
-    x = event.pageX - $(this).offset().left;
-    y = event.pageY - $(this).offset().right;
     con.beginPath();
-    con.arc(x, y, 2, 0, 2 * Math.PI);
+    con.arc(x, y, brushRadius, 0, 2 * Math.PI);
     con.closePath();
     con.fill();
     con.stroke();
@@ -23,7 +26,9 @@ $(document).ready(function () {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            currentlyDrawing = setInterval(function(){userDraw(event);}, 10);
+            x = event.pageX - $(this).offset().left;
+            y = event.pageY - $(this).offset().right;
+            currentlyDrawing = setInterval(function(){userDraw(x, y);}, 10);
         }
 
     });
