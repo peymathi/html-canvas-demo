@@ -6,12 +6,12 @@ con.fillStyle = "red";
 // Global bool that keeps the pointer drawing
 currentlyDrawing = 0;
 
-function userDraw()
+function userDraw(event)
 {
-    var randx = Math.random() * 800
-    var randy = Math.random() * 600
+    x = event.pageX - $(this).offset().left;
+    y = event.pageY - $(this).offset().right;
     con.beginPath();
-    con.arc(randx, randy, 2, 0, 2 * Math.PI);
+    con.arc(x, y, 2, 0, 2 * Math.PI);
     con.closePath();
     con.fill();
     con.stroke();
@@ -23,7 +23,7 @@ $(document).ready(function () {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            currentlyDrawing = setInterval(userDraw, 10);
+            currentlyDrawing = setInterval(function(){userDraw(event);}, 10);
         }
 
     });
