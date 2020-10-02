@@ -11,7 +11,7 @@ function userDraw()
     var randx = Math.random() * 800
     var randy = Math.random() * 600
     con.beginPath();
-    con.arc(randx, randy, 5, 0, 2 * Math.PI);
+    con.arc(randx, randy, 2, 0, 2 * Math.PI);
     con.closePath();
     con.fill();
     con.stroke();
