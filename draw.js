@@ -5,9 +5,8 @@ var con = canvas.getContext("2d");
 con.strokeStyle = "red";
 con.fillStyle = "red";
 
-// Global array that contains the intervals which allow drawing
-currentlyDrawing = false;
-drawingIntervals = [];
+// Global to tell if the mouse is down
+mouseDown = false;
 
 // Global radius value for the brush size
 brushRadius = 2
@@ -31,38 +30,23 @@ $(document).ready(function () {
     // Event for the mouse button being pressed down. Continuously draws a circle the size of the brush every 10ms until mouse up event
     $("#canvas").mousedown(function(event) {
 
-        if (event.which == 1 && !currentlyDrawing)
-        {   
-            // 4ms is the fastest that setInterval can go. Not fast enough. Using 100 intervals now so that the drawing should be updated much faster.
-            currentlyDrawing = true;
-            for (var i = 0; i < 100000; i++)
-            {
-                drawingIntervals.push(setInterval(function(){userDraw();}, 4));
-            }
-        }
+        if (event.which == 1) mouseDown = true;
 
     });
 
     // Stops the current drawing if there is any
     $(document).mouseup(function(event) {
 
-        if (event.which == 1 && currentlyDrawing)
-        {
-            while(drawingIntervals.length > 0)
-            {
-                clearInterval(drawingIntervals[0]);
-                drawingIntervals.shift();
-            }
-
-            currentlyDrawing = false;
-        }
+        if (event.which == 1) mouseDown = false;
+        
     });
 
-    // Updates the mouse position relative to the canvas
+    // Updates the mouse position relative to the canvas and will attempt to draw if the mouse is down
     $("#canvas").mousemove(function(event){
 
         relx = event.pageX - $(this).offset().left;
         rely = event.pageY - $(this).offset().top;
+        userDraw();
     });
 
 }());
