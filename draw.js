@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    var canvas = $("#canvas");
+    var canvas = $("#canvas")[0];
     var con = canvas.getContext("2d");
 
     con.strokeStyle = "red";
