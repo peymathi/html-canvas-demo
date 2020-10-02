@@ -12,6 +12,7 @@ function userDraw()
     con.beginPath();
     con.arc(randx, randy, 5, 0, 2 * Math.PI);
     con.closePath();
+    con.fill();
     con.stroke();
 }
 
