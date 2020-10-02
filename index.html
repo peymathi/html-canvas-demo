@@ -5,15 +5,18 @@
         <title>HTML 5 Canvas 2D Graphics Demo</title>
         <style>
             .centered {
-                margin: 0 0 auto;
+                margin: auto;
                 text-align: center;
+                padding: 10px;
             }
         </style>
     </head>
     <body>
         <h1 class="centered">Draw Something Cool</h1>
-        <canvas id="canvas" height="800" width="1000" style="border: solid;" class="centered">
-        </canvas>
+        <hr>
+        <div class="canvasContainer">
+            <canvas id="canvas" height="800" width="1000" style="border: solid;" class="centered"></canvas>
+        </div>
         <script src="draw.js"></script>
     </body>
 </html>
