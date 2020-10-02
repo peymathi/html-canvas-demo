@@ -37,7 +37,14 @@ $(document).ready(function () {
     // Event for the mouse button being pressed down. Continuously draws a circle the size of the brush every 10ms until mouse up event
     $("#canvas").mousedown(function(event) {
 
-        if (event.which == 1) mouseDown = true;
+        if (event.which == 1) 
+        {
+            mouseDown = true;
+            
+            // this allows for dots. not just lines
+            userDraw();
+        }
+        
 
     });
 
