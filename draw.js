@@ -6,10 +6,24 @@ $(document).ready(function () {
 
     con.strokeStyle = "red";
 
-    con.beginPath();
-    con.moveTo(0, 0);
-    con.lineTo(200, 400);
-    con.stroke();
-    con.closePath();
+    // Global bool that keeps the pointer drawing
+    keepDrawing = true;
+    
+    $("#canvas").mousedown(function(){
+
+        keepDrawing = true;
+        while (keepDrawing)
+        {   
+            var randx = Math.random() * 800
+            var randy = Math.random() * 600
+            con.beginPath()
+            con.moveTo(randx, randy);
+            con.lineTo(randx, randy);
+            con.stroke();
+        }
+
+    });
+
+    $(document).mouseup(function(){keepDrawing = false;});
 
 }());
