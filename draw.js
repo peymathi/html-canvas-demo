@@ -35,7 +35,7 @@ $(document).ready(function () {
         {   
             // 4ms is the fastest that setInterval can go. Not fast enough. Using 100 intervals now so that the drawing should be updated much faster.
             currentlyDrawing = true;
-            for (var i = 0; i < 100; i++)
+            for (var i = 0; i < 100000; i++)
             {
                 drawingIntervals.push(setInterval(function(){userDraw();}, 4));
             }
