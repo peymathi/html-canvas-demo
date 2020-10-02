@@ -11,6 +11,7 @@ currentlyDrawing = 0;
 // Global radius value for the brush size
 brushRadius = 2
 
+// Draws a single filled circle at the location specified with radius of brushRadius
 function userDraw(x, y)
 {
     con.beginPath();
@@ -22,17 +23,22 @@ function userDraw(x, y)
 
 $(document).ready(function () {
     
+    // Event for the mouse button being pressed down. Continuously draws a circle the size of the brush every 10ms until mouse up event
     $("#canvas").mousedown(function(event) {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            x = event.pageX - $(this).offset().left;
-            y = event.pageY - $(this).offset().right;
+            x = event.pageX;
+            y = event.pageY;
+
+            console.log("X: " + x);
+            console.log("Y: " + y);
             currentlyDrawing = setInterval(function(){userDraw(x, y);}, 10);
         }
 
     });
 
+    // Stops the current drawing if there is any
     $(document).mouseup(function(event) {
 
         if (event.which == 1 && currentlyDrawing)
