@@ -9,7 +9,10 @@ function userDraw()
 {
     var randx = Math.random() * 800
     var randy = Math.random() * 600
-    con.fillRect(randx, randy, 1, 1);
+    con.beginPath();
+    con.arc(randx, randy, 5, 0, 2 * Math.PI);
+    con.closePath();
+    con.stroke();
 }
 
 $(document).ready(function () {
@@ -27,8 +30,8 @@ $(document).ready(function () {
 
         if (event.which == 1 && currentlyDrawing)
         {
-            currentlyDrawing = 0;
             clearInterval(currentlyDrawing);
+            currentlyDrawing = 0;
         }
     });
 
