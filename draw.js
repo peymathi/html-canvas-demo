@@ -11,11 +11,15 @@ currentlyDrawing = 0;
 // Global radius value for the brush size
 brushRadius = 2
 
+// Globals that keep track of the mouses current position relative to the canvas object
+relx = 0;
+rely = 0;
+
 // Draws a single filled circle at the location specified with radius of brushRadius
-function userDraw(x, y)
+function userDraw()
 {
     con.beginPath();
-    con.arc(x, y, brushRadius, 0, 2 * Math.PI);
+    con.arc(relx, rely, brushRadius, 0, 2 * Math.PI);
     con.closePath();
     con.fill();
     con.stroke();
@@ -28,12 +32,7 @@ $(document).ready(function () {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            x = event.pageX - $(this).offset().left;
-            y = event.pageY - $(this).offset().top;
-
-            console.log("X: " + x);
-            console.log("Y: " + y);
-            currentlyDrawing = setInterval(function(){userDraw(x, y);}, 10);
+            currentlyDrawing = setInterval(function(){userDraw();}, 10);
         }
 
     });
@@ -46,6 +45,13 @@ $(document).ready(function () {
             clearInterval(currentlyDrawing);
             currentlyDrawing = 0;
         }
+    });
+
+    // Updates the mouse position relative to the canvas 
+    $("#canvas").mousemove(function(event){
+
+        relx = event.pageX - $(this).offset().left;
+        rely = event.pageY - $(this).offset().top;
     });
 
 }());
