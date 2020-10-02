@@ -28,8 +28,8 @@ $(document).ready(function () {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            x = event.pageX;
-            y = event.pageY;
+            x = event.pageX - $(this).offset().left;
+            y = event.pageY - $(this).offset().top;
 
             console.log("X: " + x);
             console.log("Y: " + y);
