@@ -24,7 +24,7 @@ function userDraw()
     con.beginPath();
     con.lineCap = "round";
     con.lineJoin = "round";
-    con.lineWidth = brushRadius * 2;
+    con.lineWidth = brushRadius * 4;
     con.moveTo(oldx, oldy);
     con.lineTo(newx, newy);
     con.arc(newx, newy, brushRadius, 0, 2 * Math.PI);
