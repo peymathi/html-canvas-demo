@@ -13,6 +13,8 @@ function userDraw()
     con.moveTo(randx, randy);
     con.lineTo(randx, randy);
     con.stroke();
+
+    canvas.rect(randx, randy);
 }
 
 $(document).ready(function () {
