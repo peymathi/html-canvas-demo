@@ -9,12 +9,7 @@ function userDraw()
 {
     var randx = Math.random() * 800
     var randy = Math.random() * 600
-    con.beginPath()
-    con.moveTo(randx, randy);
-    con.lineTo(randx, randy);
-    con.stroke();
-
-    canvas.rect(randx, randy);
+    con.fillRect(randx, randy, 1, 1);
 }
 
 $(document).ready(function () {
@@ -34,6 +29,7 @@ $(document).ready(function () {
         if (event.which == 1 && currentlyDrawing)
         {
             currentlyDrawing = 0;
+            clearInterval(currentlyDrawing);
         }
     });
 
