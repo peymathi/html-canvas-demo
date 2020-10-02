@@ -1,3 +1,9 @@
+var canvas = $("#canvas")[0];
+var con = canvas.getContext("2d");
+con.strokeStyle = "red";
+
+// Global bool that keeps the pointer drawing
+currentlyDrawing = 0;
 
 function userDraw()
 {
@@ -10,14 +16,6 @@ function userDraw()
 }
 
 $(document).ready(function () {
-
-    var canvas = $("#canvas")[0];
-    var con = canvas.getContext("2d");
-
-    con.strokeStyle = "red";
-
-    // Global bool that keeps the pointer drawing
-    currentlyDrawing = 0;
     
     $("#canvas").mousedown(function(event) {
 
