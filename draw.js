@@ -58,7 +58,7 @@ $(document).ready(function () {
         }
     });
 
-    // Updates the mouse position relative to the canvas and attempts to draw if the mouse is currently held down
+    // Updates the mouse position relative to the canvas
     $("#canvas").mousemove(function(event){
 
         relx = event.pageX - $(this).offset().left;
