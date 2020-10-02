@@ -18,7 +18,7 @@ oldy = 0;
 newx = 0;
 newy = 0;
 
-// Draws a single filled circle at the location specified with radius of brushRadius
+// Draws a single filled circle at the location specified with radius of brushRadius. Draws a line from that circle to the next location
 function userDraw()
 {
     con.beginPath();
