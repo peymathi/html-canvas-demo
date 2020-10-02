@@ -9,17 +9,25 @@ con.fillStyle = "red";
 mouseDown = false;
 
 // Global radius value for the brush size
-brushRadius = 2
+brushRadius = 5
 
-// Globals that keep track of the mouses current position relative to the canvas object
-relx = 0;
-rely = 0;
+// Globals that keep track of the mouses current and last position relative to the canvas object
+oldx = 0;
+oldy = 0;
+
+newx = 0;
+newy = 0;
 
 // Draws a single filled circle at the location specified with radius of brushRadius
 function userDraw()
 {
     con.beginPath();
-    con.arc(relx, rely, brushRadius, 0, 2 * Math.PI);
+    con.lineCap = "round";
+    con.lineJoin = "round";
+    con.lineWidth = brushRadius;
+    con.moveTo(oldx, oldy);
+    con.lineTo(newx, newy);
+    con.arc(newx, newy, brushRadius, 0, 2 * Math.PI);
     con.closePath();
     con.fill();
     con.stroke();
@@ -44,9 +52,11 @@ $(document).ready(function () {
     // Updates the mouse position relative to the canvas and will attempt to draw if the mouse is down
     $("#canvas").mousemove(function(event){
 
-        relx = event.pageX - $(this).offset().left;
-        rely = event.pageY - $(this).offset().top;
-        userDraw();
+        oldx = newx;
+        oldy = newy;
+        newx = event.pageX - $(this).offset().left;
+        newy = event.pageY - $(this).offset().top;
+        if (mouseDown) userDraw();
     });
 
 }());
