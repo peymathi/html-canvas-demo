@@ -65,4 +65,10 @@ $(document).ready(function () {
         if (mouseDown) userDraw();
     });
 
+    // Clicking one of the color selects
+    $(".colorSelect").click(function(event){
+        
+
+    });
+
 }());

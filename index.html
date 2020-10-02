@@ -4,11 +4,31 @@
         <meta charset="UTF-8">
         <title>HTML 5 Canvas 2D Graphics Demo</title>
         <style>
+
             .centered {
                 margin: auto;
                 text-align: center;
                 padding: 10px;
             }
+            
+            .colorSelect {
+                height: 100px;
+                width: 100px;
+                border: solid;
+                border-width: 3px;
+                position: absolute;
+                left: 200px;
+            }
+
+            #red {
+                background-color: red;
+                
+            }
+
+            .selected {
+                border-color: aqua;
+            }
+
         </style>
         <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -21,6 +41,17 @@
         <div class="canvasContainer centered">
             <canvas id="canvas" class="" height="600" width="800" style="border: solid;" ></canvas>
         </div>
+        <fieldset>
+            <div id="red" class="colorSelect"></div>
+            <div id="blue" class="colorSelect"></div>
+            <div id="yellow" class="colorSelect"></div>
+            <div id="green" class="colorSelect"></div>
+            <div id="orange" class="colorSelect"></div>
+            <div id="purple" class="colorSelect"></div>
+            <div id="white" class="colorSelect"></div>
+            <div id="black" class="colorSelect"></div>
+            <div id="custom" class="colorSelect"></div>
+        </fieldset>
         <script src="draw.js"></script>
     </body>
 </html>
