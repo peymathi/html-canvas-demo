@@ -32,7 +32,7 @@ $(document).ready(function () {
 
         if (event.which == 1 && !currentlyDrawing)
         {
-            currentlyDrawing = setInterval(function(){userDraw();}, 0.01);
+            currentlyDrawing = setInterval(function(){userDraw();}, 0.0001);
         }
 
     });
