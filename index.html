@@ -116,6 +116,17 @@
                 font-size: 14;
             }
 
+            .customColor {
+                background-color: magenta;
+                all: revert;
+                height: 5em;
+                width: 10em;
+                border: solid;
+                border-width: 3px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+            }
+
         </style>
         <script
         src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -144,6 +155,7 @@
             </div>
         </div>
         <div class="customColorForm centered">
+            <div class="customColor centered"></div>
             Custom Color - R: <input type="text" id="customR" class="customInput" min="0" max="255"/> G: <input type="text" id="customG" class="customInput" min="0" max="255"/> B: <input type="text" id="customB" class="customInput" min="0" max="255"/>
         </div>
         <script src="draw.js"></script>
