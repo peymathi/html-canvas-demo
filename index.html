@@ -13,9 +13,38 @@
             }
 
             .contentContainer {
+                margin-left: 2rem;
+                margin-right: 2rem;
+                padding: 4rem;
+                border: 1px solid #4CAF50;
+                position: relative;
+            }
+
+            .colorSelectContainer {
+                border: 1px solid blue;
+                position: relative;
+                float: left;
+                width: 15%;
+                max-width: 15%;
+                padding: 0.5em;
+            }
+
+            .canvasContainer {
+                border: 1px solid purple;
+                padding: 0.5em;
+                position: relative;
                 margin: auto;
-                border: solid;
-                border-color: blue;
+                width: 55%;
+                max-width: 55%;
+            }
+
+            .toolsContainer {
+                border: 1px solid red;
+                position: relative;
+                width: 15%;
+                max-width: 15%;
+                float: right;
+                padding: 0.5em;
             }
             
             .colorSelect {
@@ -25,13 +54,6 @@
                 border-width: 3px;
                 margin-top: 2px;
                 margin-bottom: 2px;
-            }
-
-            .colorSelectContainer {
-                float: left;
-                border: solid;
-                border-color: yellow;
-                
             }
 
             #red {
@@ -66,6 +88,9 @@
                 <div id="white" class="colorSelect"></div>
                 <div id="black" class="colorSelect"></div>
                 <div id="custom" class="colorSelect"></div>
+            </div>
+            <div class="toolsContainer">
+                
             </div>
         </div>
         <script src="draw.js"></script>
