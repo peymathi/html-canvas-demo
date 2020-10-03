@@ -74,8 +74,7 @@ $(document).ready(function () {
     // Clicking one of the color selects
     $(".colorSelect").click(function(event){
 
-        el = $(this);
-        console.log(el.id)
+        console.log($(this).attr('id'));
     });
 
 }());
