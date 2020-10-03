@@ -128,6 +128,7 @@ $(document).ready(function () {
         }
 
         $(".customColor").css('background-color', `rgb(${rval}, ${gval}, ${bval})`);
+        console.log("i ran!");
 
     });
 
