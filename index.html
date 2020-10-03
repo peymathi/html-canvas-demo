@@ -89,19 +89,6 @@
                 background-color: purple;
             }
 
-            .colorSelect .colorSelectCustom {
-                all: revert;
-                border: solid;
-                height: 2.5em;
-                border-width: 3px;
-                margin-top: 2px;
-                margin-bottom: 2px;
-                float: right;
-                clear: both;
-                width: 10em;
-                font-weight: bold;
-            }
-
             .customInput {
                 width: 1.5em;
                 display: inline;
@@ -130,15 +117,16 @@
                 <div id="purple" class="colorSelect"></div>
                 <div id="white" class="colorSelect"></div>
                 <div id="black" class="colorSelect"></div>
-                <div id="custom" class="colorSelect colorSelectCustom">
-                    Custom Color - R: <input type="text" id="customR" class="customInput" /> G: <input type="text" id="customG" class="customInput"/> B: <input type="text" id="customB" class="customInput"/>
-                </div>
+                <div id="custom" class="colorSelect">*</div>
             </div>
             <div class="toolsContainer">
             </div>
             <div class="canvasContainer centered">
                 <canvas id="canvas" class="centered" width="900" height="600" style="border: solid;" ></canvas>
             </div>
+        </div>
+        <div class="customColorForm centered">
+            Custom Color - R: <input type="text" id="customR" class="customInput" /> G: <input type="text" id="customG" class="customInput"/> B: <input type="text" id="customB" class="customInput"/>
         </div>
         <script src="draw.js"></script>
     </body>
