@@ -98,7 +98,13 @@
                 margin-bottom: 2px;
                 float: right;
                 clear: both;
-                margin-left: auto;
+                width: 10em;
+                font-weight: bold;
+            }
+
+            .customInput {
+                width: 0.5em;
+                display: inline;
             }
 
             .selected {
@@ -125,7 +131,7 @@
                 <div id="white" class="colorSelect"></div>
                 <div id="black" class="colorSelect"></div>
                 <div id="custom" class="colorSelect colorSelectCustom">
-                    Custom Color - R: <input type="text" id="customR" /> G: <input type="text" id="customG"/> B: <input type="text" id="customB" />
+                    Custom Color - R: <input type="text" id="customR" class="customInput" /> G: <input type="text" id="customG" class="customInput"/> B: <input type="text" id="customB" class="customInput"/>
                 </div>
             </div>
             <div class="toolsContainer">
