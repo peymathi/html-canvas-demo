@@ -51,7 +51,6 @@ $(document).ready(function () {
             // this allows for dots. not just lines
             userDraw();
         }
-        
 
     });
 
@@ -75,7 +74,8 @@ $(document).ready(function () {
     // Clicking one of the color selects
     $(".colorSelect").click(function(event){
 
-
+        el = $(this);
+        console.log(el.id)
     });
 
 }());
