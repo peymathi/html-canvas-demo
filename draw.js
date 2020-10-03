@@ -128,13 +128,22 @@ $(document).ready(function () {
         let gval = parseInt($("#customG").val());
         let bval = parseInt($("#customB").val());
 
-        if (rgbActive)
+        if (!(rval < 0 || rval > 255 || gval < 0 || gval > 255 || bval < 0 || bval > 255))
         {
-            con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
-            con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
+            if (rgbActive)
+            {
+                con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
+                con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
+            }
+
+            $(".customColor").css('background-color', `rgb(${rval}, ${gval}, ${bval})`);
+            $("#warning").hide();
         }
 
-        $(".customColor").css('background-color', `rgb(${rval}, ${gval}, ${bval})`);
+        else
+        {
+            $("#warning").show();
+        }
 
     });
 
