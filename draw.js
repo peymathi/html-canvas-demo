@@ -147,4 +147,13 @@ $(document).ready(function () {
 
     });
 
+    // Clicking the image will reset the canvas
+    $("#reset").click(function(event) {
+
+        var color = con.fillStyle;
+        con.fillStyle = "white";
+        con.fillRect(0, 0, $("#canvas")[0].width, $("#canvas")[0].height);
+        con.fillStyle = color;
+    });
+
 });
