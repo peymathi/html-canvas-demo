@@ -115,6 +115,17 @@ $(document).ready(function () {
     // Changing the value of one of the custom color inputs
     $(".customInput").click(function(event){
 
+        let rval = parseInt($("#customR").val());
+        let gval = parseInt($("#customG").val());
+        let bval = parseInt($("#customB").val());
+
+        if (rgbActive)
+        {
+            con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
+            con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
+        }
+
+        $(".customColor").style('background-color', `rgb(${rval}, ${gval}, ${bval})`);
 
     });
 
