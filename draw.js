@@ -37,6 +37,10 @@ function userDraw()
 
 $(document).ready(function () {
     
+    // Causes the canvas to fill to the parent div size
+    $("#canvas")[0].width = $(".canvasContainer")[0].offsetWidth - 15;
+    $("#canvas")[0].height = $(".canvasContainer")[0].offsetHeight -15;
+
     // Event for the mouse button being pressed down. Continuously draws a circle the size of the brush every 10ms until mouse up event
     $("#canvas").mousedown(function(event) {
 
@@ -70,7 +74,7 @@ $(document).ready(function () {
 
     // Clicking one of the color selects
     $(".colorSelect").click(function(event){
-        
+
 
     });
 
