@@ -36,9 +36,6 @@ function userDraw()
     con.closePath();
     con.fill();
     con.stroke();
-
-    console.log(con.strokeStyle);
-    console.log(con.fillStyle);
 }
 
 $(document).ready(function () {
@@ -94,33 +91,25 @@ $(document).ready(function () {
     // Clicking the custom color change
     $(".customColor").click(function(event){
 
-        try
-        {
-            // Update brush
-            rgbActive = true;
+        // Update brush
+        rgbActive = true;
 
-            let rval = parseInt($("#customR").val());
-            let gval = parseInt($("#customG").val());
-            let bval = parseInt($("#customB").val());
+        let rval = parseInt($("#customR").val());
+        let gval = parseInt($("#customG").val());
+        let bval = parseInt($("#customB").val());
 
-            console.log(`R: ${rval} G: ${gval} B: ${bval}`);
+        console.log(`R: ${rval} G: ${gval} B: ${bval}`);
 
-            con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
-            con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
+        con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
+        con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
 
-            // Change colorButton
-            colorButton.removeClass("selected");
-            colorButton = $(this);
-            colorButton.addClass("selected");
-            console.log(colorButton.attr('class'));
-            console.log(con.strokeStyle);
-            console.log(con.fillStyle);
-        }
-        
-        catch(error)
-        {
-            console.log(error);
-        }
+        // Change colorButton
+        colorButton.removeClass("selected");
+        colorButton = $(this);
+        colorButton.addClass("selected");
+        console.log(colorButton.attr('class'));
+        console.log(con.strokeStyle);
+        console.log(con.fillStyle);
     });
 
     // Changing the value of one of the custom color inputs
