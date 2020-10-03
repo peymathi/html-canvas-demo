@@ -81,6 +81,8 @@ $(document).ready(function () {
         colorButton.removeClass("selected");
         colorButton = $(this);
         colorButton.addClass("selected");
+        
+        if (rgbActive) rgbActive = false;
 
         // Change the brush color
         con.strokeStyle = $(this).attr('id');
@@ -125,7 +127,7 @@ $(document).ready(function () {
             con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
         }
 
-        $(".customColor").style('background-color', `rgb(${rval}, ${gval}, ${bval})`);
+        $(".customColor").css('background-color', `rgb(${rval}, ${gval}, ${bval})`);
 
     });
 
