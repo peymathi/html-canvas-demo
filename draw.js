@@ -91,19 +91,33 @@ $(document).ready(function () {
     // Clicking the custom color change
     $(".customColor").click(function(event){
 
-        // Change colorButton
-        colorButton.removeClass("selected");
-        colorButton = $(this);
-        colorButton.addClass("selected");
+        try
+        {
+            // Update brush
+            rgbActive = true;
 
-        // Update brush
-        rgbActive = true;
+            let rval = $("#customR").val();
+            let gval = $("#customG").val();
+            let bval = $("#customB").val();
 
-        let rval = $("#customR").val();
-        let gval = $("#customG").val();
-        let bval = $("#customB").val();
+            con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
 
-        con.strokeStyle(`rgb(${rval}, ${gval}, ${bval})`);
+            // Change colorButton
+            colorButton.removeClass("selected");
+            colorButton = $(this);
+            colorButton.addClass("selected");
+        }
+        
+        catch(error)
+        {
+            
+        }
+    });
+
+    // Changing the value of one of the custom color inputs
+    $(".customInput").click(function(event){
+
+
     });
 
 }());
