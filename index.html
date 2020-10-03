@@ -93,6 +93,18 @@
                 background-color: purple;
             }
 
+            .colorSelect .colorSelectCustom {
+                all: revert;
+                border: solid;
+                height: 2.5em;
+                border-width: 3px;
+                margin-top: 2px;
+                margin-bottom: 2px;
+                float: right;
+                clear: both;
+                margin-left: auto;
+            }
+
             .selected {
                 border-color: aqua;
             }
@@ -116,7 +128,9 @@
                 <div id="purple" class="colorSelect"></div>
                 <div id="white" class="colorSelect"></div>
                 <div id="black" class="colorSelect"></div>
-                <div id="custom" class="colorSelect"></div>
+                <div id="custom" class="colorSelect colorSelectCustom">
+                    Custom Color - R: <input type="text" id="customR" /> G: <input type="text" id="customG"/> B: <input type="text" id="customB" />
+                </div>
             </div>
             <div class="toolsContainer">
             </div>
