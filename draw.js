@@ -103,7 +103,7 @@ $(document).ready(function () {
         let gval = $("#customG").val();
         let bval = $("#customB").val();
 
-        con.strokeStyle(rgb(rval, gval, bval))
+        con.strokeStyle(`rgb(${rval}, ${gval}, ${bval})`);
     });
 
 }());
