@@ -9,7 +9,7 @@ con.fillStyle = "red";
 mouseDown = false;
 
 // Global radius value for the brush size
-brushRadius = 20
+brushRadius = 5
 
 // Globals that keep track of the mouses current and last position relative to the canvas object
 oldx = 0;
@@ -67,7 +67,7 @@ $(document).ready(function () {
 
     // Clicking one of the color selects
     $(".colorSelect").click(function(event){
-        
+
 
     });
 
