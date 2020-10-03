@@ -110,6 +110,8 @@ $(document).ready(function () {
             colorButton = $(this);
             colorButton.addClass("selected");
             console.log(colorButton.attr('class'));
+            console.log(con.strokeStyle);
+            console.log(con.fillStyle);
         }
         
         catch(error)
