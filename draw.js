@@ -19,7 +19,7 @@ newx = 0;
 newy = 0;
 
 // Global that tracks the color select button that is the currently selected color
-var colorButton = 0;
+var colorButton = $("#red");
 
 // Draws a line between two points - The first old position and new position
 function userDraw()
@@ -75,7 +75,7 @@ $(document).ready(function () {
     $(".colorSelect").click(function(event){
 
         // Change the prev selected border and set the new border
-        if (colorButton) colorButton.removeClass("selected");
+        colorButton.removeClass("selected");
         colorButton = $(this);
         colorButton.addClass("selected");
 
@@ -83,6 +83,13 @@ $(document).ready(function () {
         con.strokeStyle = $(this).attr('id');
         con.fillStyle = $(this).attr('id');
 
+    });
+
+    // Clicking the custom color change
+    $(".customColor").click(function(event){
+
+        // Change colorButton
+        // Update brush
     });
 
 }());
