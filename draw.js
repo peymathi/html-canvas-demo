@@ -96,9 +96,9 @@ $(document).ready(function () {
             // Update brush
             rgbActive = true;
 
-            let rval = $("#customR").val();
-            let gval = $("#customG").val();
-            let bval = $("#customB").val();
+            let rval = parseInt($("#customR").val());
+            let gval = parseInt($("#customG").val());
+            let bval = parseInt($("#customB").val());
 
             con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
 
@@ -110,7 +110,7 @@ $(document).ready(function () {
         
         catch(error)
         {
-            
+
         }
     });
 
