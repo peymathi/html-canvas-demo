@@ -103,14 +103,13 @@ $(document).ready(function () {
             console.log(`R: ${rval} G: ${gval} B: ${bval}`);
 
             con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
+            con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
 
             // Change colorButton
             colorButton.removeClass("selected");
             colorButton = $(this);
             colorButton.addClass("selected");
-            console.log(colorButton.attr('id'));
-
-            console.log("we all good fam");
+            console.log(colorButton.attr('class'));
         }
         
         catch(error)
@@ -125,4 +124,4 @@ $(document).ready(function () {
 
     });
 
-}());
+});
