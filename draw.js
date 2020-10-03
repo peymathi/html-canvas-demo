@@ -100,12 +100,15 @@ $(document).ready(function () {
             let gval = parseInt($("#customG").val());
             let bval = parseInt($("#customB").val());
 
+            console.log(`R: ${rval} G: ${gval} B: ${bval}`);
+
             con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
 
             // Change colorButton
             colorButton.removeClass("selected");
             colorButton = $(this);
             colorButton.addClass("selected");
+            console.log(colorButton.attr('id'));
 
             console.log("we all good fam");
         }
@@ -113,7 +116,6 @@ $(document).ready(function () {
         catch(error)
         {
             console.log(error);
-            console.log("somethin messed up");
         }
     });
 
