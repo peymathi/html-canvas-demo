@@ -36,6 +36,9 @@ function userDraw()
     con.closePath();
     con.fill();
     con.stroke();
+
+    console.log(con.strokeStyle);
+    console.log(con.fillStyle);
 }
 
 $(document).ready(function () {
