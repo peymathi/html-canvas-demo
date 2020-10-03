@@ -100,8 +100,6 @@ $(document).ready(function () {
         let gval = parseInt($("#customG").val());
         let bval = parseInt($("#customB").val());
 
-        console.log(`R: ${rval} G: ${gval} B: ${bval}`);
-
         con.strokeStyle = `rgb(${rval}, ${gval}, ${bval})`;
         con.fillStyle = `rgb(${rval}, ${gval}, ${bval})`;
 
@@ -109,9 +107,6 @@ $(document).ready(function () {
         colorButton.removeClass("selected");
         colorButton = $(this);
         colorButton.addClass("selected");
-        console.log(colorButton.attr('class'));
-        console.log(con.strokeStyle);
-        console.log(con.fillStyle);
     });
 
     // Changing the value of one of the custom color inputs
@@ -128,7 +123,6 @@ $(document).ready(function () {
         }
 
         $(".customColor").css('background-color', `rgb(${rval}, ${gval}, ${bval})`);
-        console.log("i ran!");
 
     });
 
