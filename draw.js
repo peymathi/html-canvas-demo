@@ -106,11 +106,14 @@ $(document).ready(function () {
             colorButton.removeClass("selected");
             colorButton = $(this);
             colorButton.addClass("selected");
+
+            console.log("we all good fam");
         }
         
         catch(error)
         {
-
+            console.log(error);
+            console.log("somethin messed up");
         }
     });
 
