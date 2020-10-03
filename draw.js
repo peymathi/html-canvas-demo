@@ -11,6 +11,9 @@ mouseDown = false;
 // Global radius value for the brush size
 brushRadius = 5
 
+// Global to remember if RGB mode is selected (custom color)
+rgbActive = 0;
+
 // Globals that keep track of the mouses current and last position relative to the canvas object
 oldx = 0;
 oldy = 0;
@@ -89,7 +92,18 @@ $(document).ready(function () {
     $(".customColor").click(function(event){
 
         // Change colorButton
+        colorButton.removeClass("selected");
+        colorButton = $(this);
+        colorButton.addClass("selected");
+
         // Update brush
+        rgbActive = true;
+
+        let rval = $("#customR").val();
+        let gval = $("#customG").val();
+        let bval = $("#customB").val();
+
+        con.strokeStyle(rgb(rval, gval, bval))
     });
 
 }());
