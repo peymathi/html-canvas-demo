@@ -115,7 +115,7 @@ $(document).ready(function () {
     });
 
     // Changing the value of one of the custom color inputs
-    $(".customInput").click(function(event){
+    $(".customInput").change(function(event){
 
         let rval = parseInt($("#customR").val());
         let gval = parseInt($("#customG").val());
