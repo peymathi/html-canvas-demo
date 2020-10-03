@@ -2,8 +2,8 @@ var canvas = $("#canvas")[0];
 
 // Global connection to the canvas
 var con = canvas.getContext("2d");
-con.strokeStyle = "red";
-con.fillStyle = "red";
+con.strokeStyle = "black";
+con.fillStyle = "black";
 
 // Global to tell if the mouse is down
 mouseDown = false;
@@ -19,7 +19,7 @@ newx = 0;
 newy = 0;
 
 // Global that tracks the color select button that is the currently selected color
-var colorButton = $("#red");
+var colorButton = $("#black");
 
 // Draws a line between two points - The first old position and new position
 function userDraw()
