@@ -18,6 +18,9 @@ oldy = 0;
 newx = 0;
 newy = 0;
 
+// Global that tracks the color select button that is the currently selected color
+var colorButton;
+
 // Draws a line between two points - The first old position and new position
 function userDraw()
 {
@@ -67,7 +70,7 @@ $(document).ready(function () {
 
     // Clicking one of the color selects
     $(".colorSelect").click(function(event){
-
+        
 
     });
 
